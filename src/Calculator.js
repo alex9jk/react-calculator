@@ -19,6 +19,7 @@ class Calculator extends Component {
         this.handleOperators = this.handleOperators.bind(this);
         this.initialize = this.initialize.bind(this);
         this.evaluate = this.evaluate.bind(this);
+        this.hover = this.hover.bind(this);
     }
 
     initialize() {
@@ -64,41 +65,48 @@ class Calculator extends Component {
         });
     }
 
+    hover(e){
+        e.target.style.borderColor = "white";
+    }
+    hoverOut(e){
+        e.target.style.borderColor = "black";
+    }
+
     render() {
         return (
             <div id="calc">
                 <Display currentVal={this.state.current} />
                 <div className="buttonGroup">
-                    <Button className="clear" display="AC" val={'AC'} buttonClicked={this.initialize} />
-                    <Button className="div" display="/" val={'/'} buttonClicked={this.handleOperators} />
-                    <Button className="div" display="X" val={'x'} buttonClicked={this.handleOperators} />
+                    <Button className="clear" display="AC" val={'AC'} buttonClicked={this.initialize} mouseOver={this.hover} mouseOut={this.hoverOut} />
+                    <Button className="div" display="/" val={'/'} buttonClicked={this.handleOperators} mouseOver={this.hover} mouseOut={this.hoverOut} />
+                    <Button className="div" display="X" val={'x'} buttonClicked={this.handleOperators} mouseOver={this.hover} mouseOut={this.hoverOut} />
 
                 </div>
                 <div className="buttonGroup">
-                    <Button className="div" display="7" val={'7'} buttonClicked={this.handleNums} />
-                    <Button className="div" display="8" val={'8'} buttonClicked={this.handleNums} />
-                    <Button className="div" display="9" val={'9'} buttonClicked={this.handleNums} />
-                    <Button className="div" display="-" val={'-'} buttonClicked={this.handleOperators} />
+                    <Button className="div" display="7" val={'7'} buttonClicked={this.handleNums} mouseOver={this.hover} mouseOut={this.hoverOut}/>
+                    <Button className="div" display="8" val={'8'} buttonClicked={this.handleNums} mouseOver={this.hover} mouseOut={this.hoverOut}/>
+                    <Button className="div" display="9" val={'9'} buttonClicked={this.handleNums} mouseOver={this.hover} mouseOut={this.hoverOut}/>
+                    <Button className="div" display="-" val={'-'} buttonClicked={this.handleOperators} mouseOver={this.hover} mouseOut={this.hoverOut}/>
 
                 </div>
                 <div className="buttonGroup">
-                    <Button className="div" display="4" val={'4'} buttonClicked={this.handleNums} />
-                    <Button className="div" display="5" val={'5'} buttonClicked={this.handleNums} />
-                    <Button className="div" display="6" val={'6'} buttonClicked={this.handleNums} />
-                    <Button className="div" display="+" val={'+'} buttonClicked={this.handleOperators} />
+                    <Button className="div" display="4" val={'4'} buttonClicked={this.handleNums} mouseOver={this.hover} mouseOut={this.hoverOut}/>
+                    <Button className="div" display="5" val={'5'} buttonClicked={this.handleNums} mouseOver={this.hover} mouseOut={this.hoverOut}/>
+                    <Button className="div" display="6" val={'6'} buttonClicked={this.handleNums} mouseOver={this.hover} mouseOut={this.hoverOut}/>
+                    <Button className="div" display="+" val={'+'} buttonClicked={this.handleOperators} mouseOver={this.hover} mouseOut={this.hoverOut}/>
                 </div>
                 <div className="buttonGroup">
-                    <Button className="div" display="1" val={'1'} buttonClicked={this.handleNums} />
-                    <Button className="div" display="2" val={'2'} buttonClicked={this.handleNums} />
-                    <Button className="div" display="3" val={'3'} buttonClicked={this.handleNums} />
+                    <Button className="div" display="1" val={'1'} buttonClicked={this.handleNums} mouseOver={this.hover} mouseOut={this.hoverOut}/>
+                    <Button className="div" display="2" val={'2'} buttonClicked={this.handleNums} mouseOver={this.hover} mouseOut={this.hoverOut}/>
+                    <Button className="div" display="3" val={'3'} buttonClicked={this.handleNums} mouseOver={this.hover} mouseOut={this.hoverOut}/>
 
                 </div>
                 <div id="lastRow">
-                    <Button className="eq" display="=" val='=' buttonClicked={this.evaluate} />
+                    <Button className="eq" display="=" val='=' buttonClicked={this.evaluate} mouseOver={this.hover} mouseOut={this.hoverOut} />
                 </div>
                 <div className="buttonGroup">
-                    <Button className="clear" display="0" val={'0'} buttonClicked={this.handleNums} />
-                    <Button className="div" display="." val={'.'} buttonClicked={this.handleNums} />
+                    <Button className="clear" display="0" val={'0'} buttonClicked={this.handleNums} mouseOver={this.hover} mouseOut={this.hoverOut}/>
+                    <Button className="div" display="." val={'.'} buttonClicked={this.handleNums} mouseOver={this.hover} mouseOut={this.hoverOut}/>
                 </div>
             </div>
         )

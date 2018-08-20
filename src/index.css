@@ -1,7 +1,7 @@
 
 #calc {
   
-  width: 22%;
+  width: 17%;
   background-color: black;
   margin: 0 auto;
   height: 500px;
@@ -18,8 +18,8 @@
   margin-bottom:.5em
 }
 .clear {
-  width: 46.5%;
-  background-color: red;
+  width: 47%;
+  background-color: #5E446D;
   color:white;
   padding-top:10px;
   height:30px;
@@ -30,8 +30,8 @@
 
 }
 .zero {
-  width: 46.5%;
-  background-color: red;
+  width: 47%;
+  background-color: #538450;
   color:white;
   padding-top:10px;
   height:30px;
@@ -43,7 +43,7 @@
 }
 .buttonGroup{
   margin: 0 auto;
-  width:90.5%;
+  width:80%;
   display:flex;
 }
 
@@ -54,7 +54,7 @@
 }
 .div {
   width: 22.8%;
-  background-color: gray;
+  background-color: #538450;
   color:white;
   padding-top:10px;
   height:30px;
@@ -66,16 +66,16 @@
 }
 
 .eq {
-  width: 22%;
-  background-color:navy;
+  width: 18%;
+  background-color: #46536D;
   color:white;
   padding-top:10px;
-  height:75px;
+  height:72px;
   text-align: center;
   border-style:solid;
   border-color: black;
   border-width: 1px;
   position:absolute;
-  left: 200px;
-  top: -41px;
+  left: 153px;
+  top: -42px;
 }
